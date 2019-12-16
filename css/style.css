@@ -1,0 +1,379 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: o auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+}
+nav{
+    background-color: black;
+}
+.dropdown-menu{
+    min-width: 700px;
+/*    margin: 10px 700px 10px -500px;*/
+    padding: 30px;
+    min-height: 150px;
+    color: white;
+}
+@media screen and (max-width:800px){
+    .dropdown-menu{
+        width: 100%;
+    }
+}
+.dropdown-item{
+    padding:2px 2px 2px 6px;
+    color:white;
+}
+
+.dropdown-item:hover{
+    background: none;
+    color:aqua ;
+}
+.shopcat{
+    margin: 3px auto;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#home {
+    height: auto;
+    width: 100%;
+}
+
+.jumbotron {
+    background-image: url(../images/bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.jumbotron .container {
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+}
+.heading{
+    margin: 60px auto;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+.chefimg{
+    margin: 20px auto;
+    height: 300px;
+    width: 300px;
+}
+.chefimg img{
+    height: 100%;
+    width: 100%;
+}
+.chefabt{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.56);
+    height: 100px;
+    width:300px;
+    position: absolute;
+    top: 60%;
+    margin: 10px auto;
+}
+.chefabt:hover{
+    color: aqua;
+}
+.services{
+    margin: 60px auto;
+}
+
+
+.service-cnt {
+    margin: 40px auto;
+    padding: 15px;
+}
+
+.item {
+    margin: 0 auto;
+    display: inline-block;
+    height: auto;
+    max-width: 300px;
+    text-align: center;
+}
+
+.item-img {
+    padding: 10px;
+    margin: 5px;
+}
+
+.item-img img {
+    height: 140px;
+    width: 100%
+}
+
+.item-text {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.ser {
+    margin: 7px auto;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.carousel{
+    margin: 20px auto;
+}
+.carousel img{
+    max-height: 60vh;
+}
+
+.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.38);
+    color: aqua;
+}
+
+#sliding marquee{
+    margin: 0 auto;
+    max-height: 50vh;
+}
+#sliding .menus img{
+    width: 100%;
+}
+
+@media screen and (max-width:800px)
+{
+    #sliding .menus img{
+    width: 60%;
+}
+}
+
+
+/*blog*/
+.post{
+    margin:40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.11);
+}
+.title{
+    margin: 10px auto;
+    font-size: 20px;
+    color: aqua;
+    font-family: sans;
+}
+
+#blog .content{
+    text-align: justify;
+}
+#blog .title li{
+    list-style-type: square;
+}
+#blog .posts{
+    margin: 30px auto;
+    text-align: justify;
+}
+#text{
+display:none;
+}
+
+#text1{
+display:none;
+}
+
+#text2{
+display:none;
+}
+.btn-container{
+  margin: auto;
+  height:44px;
+  width:166.23px;
+  
+}
+.active{
+    display: block;
+}
+/*blog ends*/
+
+
+
+
+/*contact*/
+#contact{
+    padding: 40px 10px 10px 10px;
+}
+#contact .text{
+    margin-bottom: 70px;
+}
+.contact-form{
+    border: 1px solid red;
+    margin: 0 auto;
+    position: relative;
+}
+.contact-image{
+    position: absolute;
+    top: -58px;
+    left: 43%;
+    margin: 0 auto;
+    height: 140px;
+    width: 140px;
+    background-color: aqua;
+    border: 2px solid red;
+    border-radius: 50%;
+    transform: translate(-50% -50%);
+}
+
+@media screen and (max-width:700px){
+    .contact-image{
+        left: 32%
+    }
+}
+.contact-image img{
+    height: 100px;
+}
+form{   
+    margin:100px 30px 60px 30px;
+}
+form input,textarea{
+    margin: 0 auto;
+    max-width: 500px;
+}
+label{
+    margin: 0 auto;
+    max-width: 500px;
+}
+#mapid { height: 180px; max-width: 700px; margin: 30px auto; }
+/*ends*/
+
+
+/*shop*/
+#shop{
+    margin: 40px auto;
+    width: 100%;
+}
+.section{
+    height: auto;
+    border: 1px solid red;
+    margin: 10px auto;
+    min-width: 200px;
+}
+#shop .section li{
+    list-style-type: square;
+    padding-left: 10px;
+    line-height: 2rem;
+}
+#shop .section li a{
+    color: white;
+    text-decoration: none;
+}
+#shop .section li a:hover{
+    color: aqua;
+}
+#shop .section img{
+    display: inline-block;
+    height: 130px;
+    min-width: 130px;
+}
+
+#birthdaycakes{
+    display: none;
+}
+#photocakes{
+    display: none;
+}    
+#customcakes{
+    display: none;
+}
+#aniversarycakes{
+    display: none;
+}
+#sugarfreecakes{
+    display: none;
+}
+#eggless{
+    display: none;
+}
+#pie{
+    display: none;
+}
+#muffins{
+    display: none;
+}
+#pancakes{
+    display: none;
+}
+#pastry{
+    display: none;
+}
+
+/*ends*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    margin: 0 auto;
+    border-top: 1px soild red;
+}
+.container{
+    width: 100%;
+    margin: 50px auto;
+}
+
+.social{
+    margin: 20px 9px;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.39);
+    border: 1px solid red;
+    transform: rotate(45deg);
+    text-align: center;
+    transition: .3s;
+}
+.social:hover{
+    transform: rotate(90deg);
+    transform: scale(1.2);
+}
+
+.social i{
+    width: 100%;
+    height: 100%;
+    margin: 13px 13px;
+    transform: rotate(-45deg);
+}
+.social i:hover{
+    transform: rotate(0deg);
+    margin: 15px auto;
+}
+.social a{
+    color: aqua;
+}
