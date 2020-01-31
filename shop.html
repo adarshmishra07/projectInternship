@@ -3,309 +3,201 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Cake Bake</title>
+    <title>The Cake Shop</title>
     <meta name="author" content="Adarsh">
-    <meta name="description" content="Example description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="" />
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <a class="navbar-brand" href="#">Cake Bake</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body id="body">
+    <navbar>
+        <div id="js-toggle"><i class="fa fa-bars opts" aria-hidden="true"></i></div>
+        <div class="logo"><img src="images/logo.png" alt="logo" title="Cake Shop"></div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Shop<span class="sr-only">(current)</span>
-                    </a>
-                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-12 m-2">
-                                <div class="shopcat"></div>
-                                <a class="dropdown-item" href="#">Birthday Cakes</a>
-                                <a class="dropdown-item" href="#">Photo Cakes</a>
-                                <a class="dropdown-item" href="#">Customised Cakes</a>
-                            </div>
-                            <div class="col-lg-3 col-sm-12 m-2">
-                                <div class="shopcat"></div>
-                                <a class="dropdown-item" href="#">Aniversary Cake</a>
-                                <a class="dropdown-item" href="#">Sugar Free Cakes</a>
-                                <a class="dropdown-item" href="#">Egg-less Cakes</a>
-                            </div>
-                            <div class="col-lg-3 col-sm-12 m-2">
-                                <div class="shopcat"></div>
-                                <a class="dropdown-item" href="#">Chocolate Pie</a>
-                                <a class="dropdown-item" href="#">Muffins</a>
-                                <a class="dropdown-item" href="#">Pancakes</a>
-                            </div>
-                        </div>
+        <ul class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#" class="active">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html"><img src="images/user.svg" alt=""></a></li>
+        </ul>
+    </navbar>
 
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Recipes
-                    </a>
-                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-12 m-2">
-                                <div class="shopcat">Cakes</div>
-                                <a class="dropdown-item" href="#">Chocolate Cake</a>
-                                <a class="dropdown-item" href="#">Pineapple Cake</a>
-                                <a class="dropdown-item" href="#">Oreo Cake</a>
-                            </div>
-                            <div class="col-lg-4 col-sm-12 m-2">
-                                <div class="shopcat">Others</div>
-                                <a class="dropdown-item" href="#">Chocolate Cookie</a>
-                                <a class="dropdown-item" href="#">Choclate Pie</a>
-                                <a class="dropdown-item" href="#">Pancakes</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact </a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-    <div id="shop">
-        <div class="intro">
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-4 text-center">Cake Bake</h1>
-                    <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit minus ad.</p>
+<h1 class="mtitle">Shop</h1>
+    <div id="menu" class="bg-light">
+        <div class="container">
+            
+            <div class="text text-center">We have variety of Cakes, Pastries, Muffins, Cookies and many more delecious options</div>
+            <h2 class="menu-opt my-4">Cakes</h2>
+            <div class="row text-center  justify-content-around">
+                <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="m-img m-auto"><img src="images/choclatecake.jpeg" alt="Chocolate" title="Chocolate"></div>
+                    <div class="cake">Chocolate</div>
+                    <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=5" class="text-light">Order Now</a></button></div>
                 </div>
-            </div>
-        </div>
-        <div class="row mx-auto">
-            <div class="col-lg-2 col-sm-12 section">
-                <h3 class="my-3">Shop</h3>
-                <li><a class="birthdaycakes" class="side-item" href="#birthdaycakes" onclick="block(this.className);">Birthday Cakes</a></li>
-                <li><a class="photocakes" class="side-item" href="#photocakes" onclick="block(this.className);">Photo Cakes</a></li>
-                <li><a class="customcakes" class="side-item" href="#customcakes" onclick="block(this.className);">Customised Cakes</a></li>
-                <li><a class="aniversarycakes" class="side-item" href="#aniversarycakes" onclick="block(this.className);">Aniversary Cake</a></li>
-                <li><a class="sugarfreecakes" class="side-item" href="#sugarfreecakes" onclick="block(this.className);">Sugar Free Cakes</a></li>
-                <li><a class="eggless" class="side-item" href="#eggless" onclick="block(this.className);">Egg-less Cakes</a></li>
-                <li><a class="pastry" class="side-item" href="#pastry" onclick="block(this.className);">Pastries</a></li>
-                <li><a class="pie" class="side-item" href="#pie" onclick="block(this.className);">Chocolate Pie</a></li>
-                <li><a class="muffins" class="side-item" href="#muffins" onclick="block(this.className);">Muffins</a></li>
-                <li><a class="pancakes" class="side-item" href="#pancakes" onclick="block(this.className);">Pancakes</a></li>
-            </div>
-            <div class="col-lg-9 col-sm-12 section">
-                <div id="birthdaycakes">
-                    <div class="row text-center  justify-content-around">
-                        <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
-                            <div class="m-img m-auto"><img src="images/choclatecake.jpeg" alt="Chocolate" title="Chocolate"></div>
-                            <div class="cake">Chocolate</div>
-                            <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=5" class="text-light">Order Now</a></button></div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
-                            <div class="m-img m-auto"><img src="images/blackcake.jpeg" alt="Black Forest" title="Black Forest"></div>
-                            <div class="cake">Black Forest</div>
-                            <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=1" class="text-light">Order Now</a></button></div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
-                            <div class="m-img m-auto"><img src="images/pineapplecake.jpeg" alt="Pineapple" title="Pineapple"></div>
-                            <div class="cake">Pineapple</div>
-                            <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=2" class="text-light">Order Now</a></button></div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
-                            <div class="m-img m-auto"><img src="images/redcake.jpeg" alt="Red Velvet" title="Red Velvet"></div>
-                            <div class="cake">Red Velvet</div>
-                            <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=3" class="text-light">Order Now</a></button></div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
-                            <div class="m-img m-auto"><img src="images/whitecake.png" alt="White Forest" title="White Forest"></div>
-                            <div class="cake">White Forest</div>
-                            <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=4" class="text-light">Order Now</a></button></div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
-                            <div class="m-img m-auto"><img src="images/choclatecake.jpeg" alt="Chocolate" title="Chocolate"></div>
-                            <div class="cake">Chocolate</div>
-                            <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=5" class="text-light">Order Now</a></button></div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
-                            <div class="m-img m-auto"><img src="images/buttercake.jpeg" alt="Butterscoth" title="Butterscoth"></div>
-                            <div class="cake">Butterscoth</div>
-                            <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=6" class="text-light">Order Now</a></button></div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
-                            <div class="m-img m-auto"><img src="images/pineapplecake.jpeg" alt="Pineapple" title="Pineapple"></div>
-                            <div class="cake">Pineapple</div>
-                            <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=2" class="text-light">Order Now</a></button></div>
-                        </div>
-                    </div>
-                    <div id="photocakes">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </div>
-                    <div id="customcakes">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </div>
-                    <div id="aniversarycakes">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </div>
-                    <div id="sugarfreecakes">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </div>
-                    <div id="eggless">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-
-                    </div>
-                    <div id="pie">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </div>
-                    <div id="muffins">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </div>
-                    <div id="pancakes">
-                        <img src="images/" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </div>
-                    <div id="pastry">
-                        <div class="row text-center justify-content-around">
-                    <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="m-img m-auto"><img src="images/blackcake.jpeg" alt="Black Forest" title="Black Forest"></div>
+                    <div class="cake">Black Forest</div>
+                    <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=1" class="text-light">Order Now</a></button></div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="m-img m-auto"><img src="images/pineapplecake.jpeg" alt="Pineapple" title="Pineapple"></div>
+                    <div class="cake">Pineapple</div>
+                    <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=2" class="text-light">Order Now</a></button></div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="m-img m-auto"><img src="images/redcake.jpeg" alt="Red Velvet" title="Red Velvet"></div>
+                    <div class="cake">Red Velvet</div>
+                    <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=3" class="text-light">Order Now</a></button></div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="m-img m-auto"><img src="images/whitecake.png" alt="White Forest" title="White Forest"></div>
+                    <div class="cake">White Forest</div>
+                    <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=4" class="text-light">Order Now</a></button></div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="m-img m-auto"><img src="images/choclatecake.jpeg" alt="Chocolate" title="Chocolate"></div>
+                    <div class="cake">Chocolate</div>
+                    <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=5" class="text-light">Order Now</a></button></div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="m-img m-auto"><img src="images/buttercake.jpeg" alt="Butterscoth" title="Butterscoth"></div>
+                    <div class="cake">Butterscoth</div>
+                    <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=6" class="text-light">Order Now</a></button></div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="m-img m-auto"><img src="images/pineapplecake.jpeg" alt="Pineapple" title="Pineapple"></div>
+                    <div class="cake">Pineapple</div>
+                    <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=2" class="text-light">Order Now</a></button></div>
+                </div>
+                <h2 class="menu-opt my-4">Pastires</h2>
+                <div class="row text-center justify-content-around">
+                    <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
                         <div class="m-img m-auto"><img src="images/blackpastry.png" alt="Black Forest" title="Black Forest"></div>
                         <div class="cake">Black Forest</div>
-                        <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=7" class="text-light">Order Now</a></button></div>
+                        <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=7" class="text-light">Order Now</a></button></div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
                         <div class="m-img m-auto"><img src="images/pineapplepastry.jpeg" alt="Pineapple" title="Pineapple"></div>
                         <div class="cake">Pineapple</div>
-                        <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=8" class="text-light">Order Now</a></button></div>
+                        <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=8" class="text-light">Order Now</a></button></div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
                         <div class="m-img m-auto"><img src="images/whitepastry.jpeg" alt="White forest" title="White forest"></div>
                         <div class="cake">White forest</div>
-                        <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=9" class="text-light">Order Now</a></button></div>
+                        <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=9" class="text-light">Order Now</a></button></div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
                         <div class="m-img m-auto"><img src="images/choclatepastry.jpeg" alt="Chocolate" title="Chocolate"></div>
                         <div class="cake">Chocolate</div>
-                        <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=10" class="text-light">Order Now</a></button></div>
+                        <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=10" class="text-light">Order Now</a></button></div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
                         <div class="m-img m-auto"><img src="images/redpastry.jpeg" alt="Red Velvet" title="Red Velvet"></div>
                         <div class="cake">Red Velvet</div>
-                        <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=11" class="text-light">Order Now</a></button></div>
+                        <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=11" class="text-light">Order Now</a></button></div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
                         <div class="m-img m-auto"><img src="images/butterpastry.jpeg" alt="Butterscoth" title="Butterscoth"></div>
                         <div class="cake">Butterscotch</div>
-                        <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=12" class="text-light">Order Now</a></button></div>
+                        <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=12" class="text-light">Order Now</a></button></div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
                         <div class="m-img m-auto"><img src="images/pineapplepastry.jpeg" alt="Pineapple" title="Pineapple"></div>
                         <div class="cake">Pineapple</div>
-                        <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=8" class="text-light">Order Now</a></button></div>
+                        <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=8" class="text-light">Order Now</a></button></div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-md-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                    <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
                         <div class="m-img m-auto"><img src="images/whitepastry.jpeg" alt="White forest" title="White forest"></div>
                         <div class="cake">White forest</div>
-                        <div class="order"><button type="button" class="btn btn-outline-info"><a href="order.php?id=9" class="text-light">Order Now</a></button></div>
+                        <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=9" class="text-light">Order Now</a></button></div>
                     </div>
                 </div>
+                <h2 class="menu-opt my-4">Cookies &amp; Muffins</h2>
+                <div class="row text-center justify-content-around">
+                    <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                        <div class="m-img m-auto"><img src="images/cookies.jpeg" alt=" " title=""></div>
+                        <div class="cake">Chocolate Cookie</div>
+                        <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=13" class="text-light">Order Now</a></button></div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                        <div class="m-img m-auto"><img src="images/cookies.jpeg" alt=" " title=""></div>
+                        <div class="cake">Chocolate Cookie</div>
+                        <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=13" class="text-light">Order Now</a></button></div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                        <div class="m-img m-auto"><img src="images/muffin.jpeg" alt=" " title=""></div>
+                        <div class="cake">Muffin</div>
+                        <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=14" class="text-light">Order Now</a></button></div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 my-5 wow fadeIn" data-wow-duration="1s" data-wow-delat="0.5s">
+                        <div class="m-img m-auto"><img src="images/pie.jpeg" alt=" " title=""></div>
+                        <div class="cake">Chocolate Pie</div>
+                        <div class="order"><button type="button" class="btn btn-success"><a href="order.php?id=15" class="text-light">Order Now</a></button></div>
                     </div>
                 </div>
-            </div>
+                <div class="text text-center my-4">For more details and orders contact us at <a href="mailto:">thecakeshop@xyz.com</a></div>
 
+            </div>
         </div>
 
-        <footer>
-            <div class="container">
-                <div class="row text-center mx-auto justify-content-center">
-                    <div class="social"><a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></div>
-                    <div class="social"><a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></div>
-                    <div class="social"><a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></div>
-                    <div class="social"><a href="#"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></div>
+
+        <footer class="bg-dark">
+            <div class="row  justify-content-between px-5">
+                <div class="foot" data-wow-delay="0.3s">
+                    <div class="name">The Cake Shop</div>
+                    <div class="address">23-B Neelyog,<br>Near APMC market,<br>Vashi Navi Mumbai</div>
+                    <div class="socials">
+                        <div class="social"><a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></div><br>
+                        <div class="social"><a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></div><br>
+                        <div class="social"><a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></div>
+                    </div>
+                </div>
+                <div class="quick-links" data-wow-delay="0.3s">
+                    <div class="name">Quick Links</div>
+                    <div class="links">
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14950954.636177184!2d36.042332204989656!3d23.813783474490165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e7b33fe7952a41%3A0x5960504bc21ab69b!2sSaudi%20Arabia!5e0!3m2!1sen!2sin!4v1575531830724!5m2!1sen!2sin" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
             </div>
-            <div class="copyright text-center mb-3">Copyright &copy; 2019 Cake Bake</div>
+            <div class="copyright">Copyright &copy; 2019</div>
         </footer>
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-            function block(item) {
-                var x = document.getElementById(item);
-                x.style.display = "block";
-            }
-
-        </script>
+        <div class="to-top"><a href="#body" class="js-anchor-link"><i class="fa fa-arrow-up"></i></a></div>
 </body>
-
-</html>
+<script src="js/wow.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.opts').click(function() {
+            $('.main-nav').toggleClass('visible');
+        })
+    });
+//    scroll
+      $(".js-anchor-link").click(function(t) {
+        t.preventDefault();
+        var a = $($(this).attr("href"));
+        if (a.length) {
+            var e = a.offset().top;
+            $("body, html").animate({
+                scrollTop: e + "px"
+            }, 800)
+        }
+    });
+</script></html>

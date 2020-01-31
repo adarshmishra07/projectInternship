@@ -14,48 +14,64 @@
 </head>
 
 <body>
+<!--
+    <?php
+$id=$_GET["id"];
+$servername="localhost";
+$username="root";
+$password="";
+$database="cakeshop";
+$conn = new mysqli ($servername, $username, $password,$database);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+//echo "Connected successfully\n";
+    $sql ="select * from menu where cid='$id' ";
+    $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {  
+        
+        $name=$row['cname'];       
+  
+   }
+}
+?>
+-->
     <navbar>
         <div id="js-toggle"><i class="fa fa-bars opts" aria-hidden="true"></i></div>
         <div class="logo"><img src="images/logo.png" alt="logo" title="Cake Shop"></div>
 
         <ul class="main-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li class="active"><a href="#" class="active">Contact</a></li>
-            <li><a href="register.html"><img src="images/user.svg" alt=""></a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </navbar>
-    <h1 class="mtitle">Contact Us</h1>
-    <div id="contact">
-        <div class="container">
-            
-            <div class="text text-center">For business enquries and party order contact us !</div>
-            <div class="contact-form">
-                <div class="im-frm">
-                    <div class="contact-image"><img src="images/contact.svg" alt="contact" title=" "></div>
+   
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center mb-0">Cake : <div class="order-cake"> x1 <?php echo $name ;?></div>
+            </h2>
+            <form class="mt-3" id="order">
+                <div class="form-group">
+                    <input type="name" class="form-control" name="uname" placeholder="Name" required>
                 </div>
-                <form method="post" action="db/connect.php" id="contact">
-                    <div class="form-group">
-                        <input type="name" class="form-control" name="uname" placeholder="Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" name="e-mail" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" name="msg" rows="3" placeholder="Message" maxlength="240" required></textarea>
-                    </div>
-                    <div class="form-group text-center">
-                        <input type="submit" value="Submit" class="btn sb">
-                    </div>
-                </form>
-
-            </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="e-mail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="msg" rows="3" placeholder="Address" maxlength="240" required></textarea>
+                </div>
+                <div class="form-group text-center">
+                    <input type="submit" value="Order" class="btn sb">
+                </div>
+            </form>
         </div>
     </div>
-
-
     <footer class="bg-dark">
         <div class="row  justify-content-between px-5">
             <div class="foot" data-wow-delay="0.3s">
@@ -71,10 +87,10 @@
                 <div class="name">Quick Links</div>
                 <div class="links">
                     <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html/#">About</a></li>
+                        <li><a href="index.html/#">Gallery</a></li>
+                        <li><a href="index.html/#">Services</a></li>
+                        <li><a href="index.html/#">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -101,5 +117,7 @@
     });
 
 </script>
+
+
 
 </html>

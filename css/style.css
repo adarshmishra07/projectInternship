@@ -1,99 +1,233 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Aladin|Alegreya+SC&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 body {
-    margin: o auto;
-    padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-    background-color: black;
-    color: white;
+    padding: 0px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+    font-family: 'Alegreya SC', serif;
 }
-nav{
-    background-color: black;
+h1, h2, h3{
+    font-family: 'Aladin', cursive;
 }
-.dropdown-menu{
-    min-width: 700px;
-/*    margin: 10px 700px 10px -500px;*/
-    padding: 30px;
-    min-height: 150px;
-    color: white;
+.logo {
+    margin: 4px 20px;
 }
-@media screen and (max-width:800px){
-    .dropdown-menu{
+
+.logo img {
+    height: 60px;
+    transition: .3s
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/*--nav bar--*/
+navbar {
+    z-index: 9999;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    transition: all 0.3s;
+    background-color: white;
+}
+
+.main-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.main-nav li {
+/*    padding: 5px 20px 5px 20px;*/
+    text-align: center;
+    line-height: 3;
+}
+
+a.active{
+    background-color: violet;
+}
+navbar ul li a {
+    margin: 0 auto;
+    text-decoration: none;
+    font-family: verdana, sans-serif;
+    padding: 30px 20px  30px 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+navbar ul li:hover > a {
+    text-decoration: none;
+    color: black;
+}
+
+#js-toggle {
+    display: none;
+    color: black;
+}
+
+@media screen and (max-width : 800px) {
+    navbar {
+        margin: 0px;
+        padding: 0px;
+        display: inline;
+    }
+
+    .main-nav {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px;
+        display: none;
+        text-align: center;
+        height: auto;
+        background-color: violet;
+    }
+
+    .visible {
+        display: block;
+    }
+
+    .main-nav li {
+        border-bottom: 1px solid white;
         width: 100%;
     }
-}
-.dropdown-item{
-    padding:2px 2px 2px 6px;
-    color:white;
-}
 
-.dropdown-item:hover{
-    background: none;
-    color:aqua ;
-}
-.shopcat{
-    margin: 3px auto;
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+    .main-nav li a {
+        font-size: 18px;
+        padding: 5px
+    }
 
-#home {
-    height: auto;
-    width: 100%;
+    #js-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 22px;
+    }
+    a.active{
+        color: red;
+    }
 }
-
-.jumbotron {
-    background-image: url(../images/bg.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.jumbotron .container {
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-}
-.heading{
-    margin: 60px auto;
-    font-weight: lighter;
-    letter-spacing: 2px;
-}
-.chefimg{
-    margin: 20px auto;
-    height: 300px;
-    width: 300px;
-}
-.chefimg img{
-    height: 100%;
-    width: 100%;
-}
-.chefabt{
+.mtitle{
+    background-color: violet;
+    padding: 30px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.56);
-    height: 100px;
-    width:300px;
-    position: absolute;
-    top: 60%;
+}
+/*slider*/
+.carousel {
     margin: 10px auto;
-}
-.chefabt:hover{
-    color: aqua;
-}
-.services{
-    margin: 60px auto;
+
 }
 
+.carousel img {
+    max-height: 95vh;
+    width: 100%
+}
+.seprator{
+    max-width: 600px;
+}
+.seprator img{
+    width: 100%;  
+}
 
+/*ends*/
+.container {
+    margin: 40px auto;
+    padding: 10px;
+}
+
+/*about starts*/
+.title {
+    text-align: center;
+    padding: 20px;
+}
+
+.image-ab {
+    max-width: 500px;
+}
+
+.image-ab img {
+    height: 240px;
+}
+
+.ab-text {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.ex {
+    font-size: 22px;
+    font-weight: bold;
+}
+.abs{
+    margin: 0 auto;
+     border:2px solid black;
+}
+.nu{
+    padding: 10px;
+   
+    border-collapse: collapse;
+}
+.num {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.value {
+    font-size: 22px;
+    letter-spacing: 4px;
+}
+.team-t{
+    font-weight: bold;
+    margin: 30px auto;
+    background-color: rgba(105, 105, 105, 0.1);
+    box-shadow: inset 0 0 20px grey;
+    padding: 14px 0px;
+}
+.team{
+    margin: 0 auto;
+    text-align: center;
+}
+.mem{
+    margin: 10px auto;
+    padding: 6px 0px;
+    transition: .5s;
+    max-width: 300px;
+}
+.mem:hover{
+    transform: scale(1.1);
+    box-shadow: inset 0 0 20px grey;
+    
+}
+.timg{
+    height: 215px;
+    text-align: center;  
+}
+.timg img{
+    height: 100%;
+    border-radius: 50%;
+}
+.tname,tinfo{
+    padding: 10px 2px;
+}
+.tname{
+    font-size: 20px;
+    font-weight: bold;
+}   
+/*about ends*/
+
+/*services*/
 .service-cnt {
     margin: 40px auto;
     padding: 15px;
@@ -128,92 +262,82 @@ nav{
     font-weight: bold;
 }
 
-
-.carousel{
-    margin: 20px auto;
-}
-.carousel img{
-    max-height: 60vh;
-}
-
-.carousel-caption{
-    background-color: rgba(0, 0, 0, 0.38);
-    color: aqua;
-}
-
-#sliding marquee{
+.shope{
     margin: 0 auto;
-    max-height: 50vh;
+    padding: 15px;
+    text-align: center;
+    max-width: 300px;
+    margin: 20px auto;
+    border: 1px solid grey;
+    box-shadow: 4px 5px grey;
 }
-#sliding .menus img{
+.itemname{
+    margin: 20px auto;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+}
+.shopex img{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+}
+/*services end*/
+
+
+.wrapper{
+    color: white;
+    margin: 40px auto;
+    width: 100%;
+    height: 40vh;
+    background-image: url(../images/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*menu*/
+.menu-opt{
+    margin:  auto;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    background-color: rgba(105, 105, 105, 0.1);
+    padding: 12px;
+    box-shadow: inset 0 0 20px grey;
+}
+.m-img{
+    height: 200px;
+    width: 220px;
+    margin: 10px;
+    border: 1px solid black;
+    
+}
+.menu:hover{
+ transform: scale(1.1);
+    box-shadow: inset 0 0 20px grey;
+    
+}
+.m-img img{
+    height: 100%;
     width: 100%;
 }
-
-@media screen and (max-width:800px)
-{
-    #sliding .menus img{
-    width: 60%;
-}
+.cake{
+    padding: 8px 0px 8px 0px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-
-/*blog*/
-.post{
-    margin:40px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.11);
-}
-.title{
-    margin: 10px auto;
-    font-size: 20px;
-    color: aqua;
-    font-family: sans;
-}
-
-#blog .content{
-    text-align: justify;
-}
-#blog .title li{
-    list-style-type: square;
-}
-#blog .posts{
-    margin: 30px auto;
-    text-align: justify;
-}
-#text{
-display:none;
-}
-
-#text1{
-display:none;
-}
-
-#text2{
-display:none;
-}
-.btn-container{
-  margin: auto;
-  height:44px;
-  width:166.23px;
-  
-}
-.active{
-    display: block;
-}
-/*blog ends*/
+/*menu ends*/
 
 
 
-
-/*contact*/
-#contact{
-    padding: 40px 10px 10px 10px;
-}
+/*contact us*/
 #contact .text{
     margin-bottom: 70px;
 }
 .contact-form{
-    border: 1px solid red;
+    border: 1px solid black;
     margin: 0 auto;
     position: relative;
 }
@@ -224,7 +348,7 @@ display:none;
     margin: 0 auto;
     height: 140px;
     width: 140px;
-    background-color: aqua;
+    background-color: white;
     border: 2px solid red;
     border-radius: 50%;
     transform: translate(-50% -50%);
@@ -236,7 +360,7 @@ display:none;
     }
 }
 .contact-image img{
-    height: 100px;
+    height: 80px;
 }
 form{   
     margin:100px 30px 60px 30px;
@@ -249,131 +373,110 @@ label{
     margin: 0 auto;
     max-width: 500px;
 }
-#mapid { height: 180px; max-width: 700px; margin: 30px auto; }
-/*ends*/
-
-
-/*shop*/
-#shop{
-    margin: 40px auto;
-    width: 100%;
+.sb{
+    background-color: lawngreen;
 }
-.section{
-    height: auto;
-    border: 1px solid red;
-    margin: 10px auto;
-    min-width: 200px;
+.text{
+    font-size: 20px;
 }
-#shop .section li{
-    list-style-type: square;
-    padding-left: 10px;
-    line-height: 2rem;
-}
-#shop .section li a{
-    color: white;
-    text-decoration: none;
-}
-#shop .section li a:hover{
-    color: aqua;
-}
-#shop .section img{
-    display: inline-block;
-    height: 130px;
-    min-width: 130px;
-}
-
-#birthdaycakes{
-    display: none;
-}
-#photocakes{
-    display: none;
-}    
-#customcakes{
-    display: none;
-}
-#aniversarycakes{
-    display: none;
-}
-#sugarfreecakes{
-    display: none;
-}
-#eggless{
-    display: none;
-}
-#pie{
-    display: none;
-}
-#muffins{
-    display: none;
-}
-#pancakes{
-    display: none;
-}
-#pastry{
-    display: none;
-}
-
+button a{
+ font-family: sans-serif;
+} 
 /*ends*/
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-footer{
+/*footer*/
+footer {
     margin: 0 auto;
-    border-top: 1px soild red;
-}
-.container{
     width: 100%;
-    margin: 50px auto;
+    padding: 20px;
+    border-top: 1px solid grey;
+    color: white;
+    line-height: 30px;
 }
 
-.social{
-    margin: 20px 9px;
-    height: 50px;
-    width: 50px;
-    background-color: rgba(255, 255, 255, 0.39);
-    border: 1px solid red;
-    transform: rotate(45deg);
+.foot,
+.map,
+.quick-links {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+}
+.map iframe{
+    max-width: 400px;
+}
+.name {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+    text-align: left;
+    color: white;
+}
+
+.address {
+    text-align: left;
+    margin: 8px auto;
+}
+
+.quick-links ul {
+    list-style-type: none;
     text-align: center;
-    transition: .3s;
-}
-.social:hover{
-    transform: rotate(90deg);
-    transform: scale(1.2);
+    margin: 8px auto;
 }
 
-.social i{
-    width: 100%;
-    height: 100%;
-    margin: 13px 13px;
-    transform: rotate(-45deg);
+.quick-links ul li a {
+    color: white;
 }
-.social i:hover{
-    transform: rotate(0deg);
-    margin: 15px auto;
+
+.socials {
+    display: flex;
+    text-align: center;
+ 
 }
-.social a{
-    color: aqua;
+.social{
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border-radius: 50%;
 }
+   
+.social a {
+    margin: 5px;
+    padding: 5px 5px 5px 0px;
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+}
+
+/*foot*/
+
+.to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: coral;
+    text-align: center;
+}
+
+.to-top a {
+    color: white;
+    font-size: 22px;
+}
+
+.container h2 .order-cake{
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+#login input,text-area{
+    max-width: 400px;
+    height: 50px;
+}
+
